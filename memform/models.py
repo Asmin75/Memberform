@@ -70,7 +70,7 @@ class Member(models.Model):
     email_address = models.EmailField(max_length=100)
     title = models.CharField(max_length=6, choices=TITLE_CHOICES)
     first_name = models.CharField(max_length=80)
-    middle_name = models.CharField(max_length=80)
+    middle_name = models.CharField(max_length=80, blank=True)
     last_name = models.CharField(max_length=80)
     date_of_birth = models.DateField(max_length=10)
     gender = models.CharField(choices=GENDER_CHOICES, max_length=128)
