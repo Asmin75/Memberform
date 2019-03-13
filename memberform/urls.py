@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from memform import views
+
+admin.site.site_header = settings.ADMIN_SITE_HEADER
 
 urlpatterns = [
     path('', admin.site.urls),
+    path('index',views.HomeView.as_view(),name='home'),
+    path('list', views.HomeListView.as_view(), name='list'),
+
 ]

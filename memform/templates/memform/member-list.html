@@ -1,0 +1,103 @@
+{% extends 'memform/base.html' %}
+{% load static %}
+{% block title %}Member List{% endblock %}
+{% block content %}
+<section class="content">
+    <div class="body_scroll">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Member list</h2>
+                    <!--<ul class="breadcrumb">-->
+                        <!--&lt;!&ndash;<li class="breadcrumb-item"><a href="index.html"><i class="aa la-home"></i> Practical Action</a></li>&ndash;&gt;-->
+                        <!--<li class="breadcrumb-item">Activity</li>-->
+                        <!--<li class="breadcrumb-item active">list</li>-->
+                    <!--</ul>-->
+                    <!--<button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>-->
+                <!--</div>-->
+                <!--<div class="col-lg-5 col-md-6 col-sm-12">-->
+                    <!--<button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i class="la la-arrow-right"></i></button>-->
+                    <!--<a href="{% url 'home' %}" ><button class="btn btn-success btn-icon float-right" type="button"><i class="la la-plus"></i></button></a>-->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="card project_list">
+                        <div class="table-responsive">
+                            <table class="table table-hover c_table theme-color">
+                                <thead>
+                                    <tr>
+                                        <th>Email Address</th>
+                                        <th>Title</th>
+                                        <th>First Name</th>
+                                        <th>Middle Name</th>
+                                        <th>Last Name</th>
+                                        <th>Date Of Birth</th>
+                                        <th>Gender<th>
+                                        <th>Program Participated</th>
+                                        <th>Program Start Year</th>
+                                        <th>Program End Year</th>
+                                        <th>Current Designation</th>
+                                        <th>Current Organization</th>
+                                        <th>Business Address</th>
+                                        <th>Residence Address</th>
+                                        <th>Personal Email</th>
+                                        <th>Office Email</th>
+                                        <th>Office Phone</th>
+                                        <th>Residence Phone</th>
+                                        <th>Mobile Phone</th>
+                                        <th>Photo</th>
+                                        <th>Social Media Address</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for Member in object_list %}
+
+                                    <tr>
+                                        <td>{{ Member.email_address }}</td>
+                                        <td>{{ Member.title }}</td>
+                                        <td>{{ Member.first_name }}</td>
+                                        <td>{{ Member.middle_name }}</td>
+                                        <td>{{ Member.last_name }}</td>
+                                        <td>{{ Member.date_of_birth }}</td>
+                                        <td>{{ Member.gender }}</td>
+                                        <td>{{ Member.program_participated }}</td>
+                                        <td>{{ Member.program_start_year }}</td>
+                                        <td>{{ Member.program_end_year }}</td>
+                                        <td>{{ Member.current_designation }}</td>
+                                        <td>{{ Member.current_organization }}</td>
+                                        <td>{{ Member.business_address }}</td>
+                                        <td>{{ Member.residence_address }}</td>
+                                        <td>{{ Member.personal_email }}</td>
+                                        <td>{{ Member.office_email }}</td>
+                                        <td>{{ Member.office_phone }}</td>
+                                        <td>{{ Member.residence_phone }}</td>
+                                        <td>{{ Member.mobile_phone }}</td>
+                                        <td>{{ Member.photo }}</td>
+                                        <td>{{ Member.social_media_address }}</td>
+
+
+
+
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <ul class="pagination pagination-primary mt-4">
+                            <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+                            <li class="page-item"><a class="page-link" href="javascript:void(0);">5</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
