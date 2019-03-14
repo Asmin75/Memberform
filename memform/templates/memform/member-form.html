@@ -1,27 +1,53 @@
 {% extends 'memform/base.html' %}
 {% load static %}
-{% block title %}Member Form{% endblock %}
+{% block title %}Nepal-US Alumni Network Membership Form [Exchange Alumni] {% endblock %}
 {% block content %}
-<body>
 <section class="content">
     <div class="formHolder">
         <div class="widget-info margin-top-large">
             <div class="widget-head">
                 <div class="widget-body mt-2 horizontalForm">
                     <div class="widget-body">
-                        <h3>Member Form</h3>
+                        <h3><u>Nepal-US Alumni Network Membership Form [Exchange Alumni] </u></h3><br>
                         <form action="" method="POST" id="mform" enctype="multipart/form-data" novalidate>     {%csrf_token %}
-                            {{ form.as_p }}
+                            Email Address <br/>{{form.email_address}}<br/>
+                            Title <br/>{{form.title}}<br/>
+                            First Name <br/>{{form.first_name}}<br/>
+                            Middle Name <br/>{{form.middle_name}}<br/>
+                            Last Name <br/>{{form.last_name}}<br/>
+                            Date Of Birth <div class="input-group date" id="date_of_birth" data-target-input="nearest">
+                              <input type="text" class="datetimepicker-input" name="date_of_birth" id="id_date_of_birth" data-target="#date_of_birth"/>
+                              <div class="input-group-append" data-target="#date_of_birth" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                              </div>
+                            </div>
+                            Gender <br/>{{form.gender}}<br/>
+                            Program Participated <br/>{{form.program_participated}}<br/>
+                            Program Start Year<br>{{form.program_start_year}}<br/>
+                            Program End Year<br/>{{form.program_end_year}}<br/>
+                            Current Designation<br/>{{form.current_designation}}<br/>
+                            Current Organization<br/>{{form.current_organization}}<br/>
+                            Bussiness Address<br/>{{form.business_address}}<br/>
+                            Residence Address<br/>{{form.residence_address}}<br/>
+                            Personal Email<br/>{{form.personal_email}}<br/>
+                            Office Email<br/>{{form.office_email}}<br/>
+                            Office Phone<br/>{{form.office_phone}}<br/>
+                            Mobile Phone<br/>{{form.mobile_phone}}<br/>
+                            Photo<br/>{{form.photo}}<br/>
+                            Social Media Address<br/>{{form.social_media_address}}<br/>
+
                             <button type="submit" class="btn btn-xs btn-primary">Submit</button>
                         </form>
-                        <script>
-                        $("#DogForm").on('submit', function(event) {
-                            alert("Form Submitted Successfully!");
-                        </script>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<script>
+        $(function () {
+    $("#id_date_of_birth").datetimepicker();
+    });
+</script>
 {% endblock %}

@@ -22,7 +22,8 @@ admin.site.site_header = settings.ADMIN_SITE_HEADER
 
 urlpatterns = [
     path('', admin.site.urls),
-    path('index',views.HomeView.as_view(),name='home'),
+    path('index', views.HomeView.as_view(), name='home'),
+    path('result', views.SuccessView.as_view(), name='result'),
     path('list', views.HomeListView.as_view(), name='list'),
 
 ]
