@@ -10,34 +10,37 @@
                     <div class="widget-body">
                         <h3><u>Nepal-US Alumni Network Membership Form [Exchange Alumni] </u></h3><br>
                         <form action="" method="POST" id="mform" enctype="multipart/form-data" novalidate>     {%csrf_token %}
-                            Email Address <br/>{{form.email_address}}<br/>
-                            Title <br/>{{form.title}}<br/>
-                            First Name <br/>{{form.first_name}}<br/>
-                            Middle Name <br/>{{form.middle_name}}<br/>
-                            Last Name <br/>{{form.last_name}}<br/>
-                            Date Of Birth <div class="input-group date" id="date_of_birth" data-target-input="nearest">
-                              <input type="text" class="datetimepicker-input" name="date_of_birth" id="id_date_of_birth" data-target="#date_of_birth"/>
-                              <div class="input-group-append" data-target="#date_of_birth" data-toggle="datetimepicker">
+                            Email Address: <font color="red">*</font><br/>{{form.email_address.errors}}{{form.email_address}}<br/>
+                            Title: <font color="red">*</font><br/>{{form.title.errors}}{{form.title}}<br/>
+                            First Name: <font color="red">*</font><br/>{{form.first_name.errors}}{{form.first_name}}<br/>
+                            Middle Name: <br/>{{form.middle_name.errors}}{{form.middle_name}}<br/>
+                            Last Name: <font color="red">*</font><br/>{{form.last_name.errors}}{{form.last_name}}<br/>
+                            Date Of Birth: <font color="red">*</font><div class="input-group date" id="id_date_of_birth" data-target-input="nearest">
+                              <input type="text" class="datetimepicker-input" name="date_of_birth" id="id_date_of_birth" data-target="#id_date_of_birth"/>
+                              <div class="input-group-append" data-target="#id_date_of_birth" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                               </div>
                             </div>
-                            Gender <br/>{{form.gender}}<br/>
-                            Program Participated <br/>{{form.program_participated}}<br/>
-                            Program Start Year<br>{{form.program_start_year}}<br/>
-                            Program End Year<br/>{{form.program_end_year}}<br/>
-                            Current Designation<br/>{{form.current_designation}}<br/>
-                            Current Organization<br/>{{form.current_organization}}<br/>
-                            Bussiness Address<br/>{{form.business_address}}<br/>
-                            Residence Address<br/>{{form.residence_address}}<br/>
-                            Personal Email<br/>{{form.personal_email}}<br/>
-                            Office Email<br/>{{form.office_email}}<br/>
-                            Office Phone<br/>{{form.office_phone}}<br/>
-                            Mobile Phone<br/>{{form.mobile_phone}}<br/>
-                            Photo<br/>{{form.photo}}<br/>
-                            Social Media Address<br/>{{form.social_media_address}}<br/>
-
+                            Gender: <font color="red">*</font><br/>{{form.gender.errors}}{{form.gender}}<br/>
+                            Program Participated: <font color="red">*</font><br/>{{form.program_participated.errors}}{{form.program_participated}}<br/>
+                            Program Start Year: <font color="red">*</font><br>{{form.program_start_year.errors}}{{form.program_start_year}}<br/>
+                            Program End Year: <font color="red">*</font><br/>{{form.program_end_year.errors}}{{form.program_end_year}}<br/>
+                            Current Designation: <font color="red">*</font><br/>{{form.current_designation.errors}}{{form.current_designation}}<br/>
+                            Current Organization: <font color="red">*</font><br/>{{form.current_organization.errors}}{{form.current_organization}}<br/>
+                            Bussiness Address: <font color="red">*</font><br/>{{form.business_address.errors}}{{form.business_address}}<br/>
+                            Residence Address: <font color="red">*</font><br/>{{form.residence_address.errors}}{{form.residence_address}}<br/>
+                            Personal Email: <font color="red">*</font><br/>{{form.personal_email.errors}}{{form.personal_email}}<br/>
+                            Office Email: <br/>{{form.office_email.errors}}{{form.office_email}}<br/>
+                            Office Phone: <br/>{{form.office_phone.errors}}{{form.office_phone}}<br/>
+                            Residence Phone: <br/>{{form.residence_phone.errors}}{{form.residence_phone}}<br/>
+                            Mobile Phone: <font color="red">*</font><br/>{{form.mobile_phone.errors}}{{form.mobile_phone}}<br/>
+                            Please upload your recent full-face passport size photo: <font color="red">*</font><br/>{{form.photo.errors}}{{form.photo}}<br/>
+                            Social Media Address <font color="red">*</font><br/>{{form.social_media_address.errors}}{{form.social_media_address}}<br/>
                             <button type="submit" class="btn btn-xs btn-primary">Submit</button>
+
                         </form>
+
+
 
                     </div>
                 </div>
