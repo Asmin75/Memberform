@@ -16,8 +16,9 @@
                             Middle Name: <br/>{{form.middle_name.errors}}{{form.middle_name}}<br/>
                             Last Name: <font color="red">*</font><br/>{{form.last_name.errors}}{{form.last_name}}<br/>
                             Date Of Birth: <font color="red">*</font><div class="input-group date" id="id_date_of_birth" data-target-input="nearest">
-                              <input type="text" class="datetimepicker-input" name="date_of_birth" id="id_date_of_birth" data-target="#id_date_of_birth"/>
-                              <div class="input-group-append" data-target="#id_date_of_birth" data-toggle="datetimepicker">
+                              <!--<input type="text" class="datetimepicker-input" name="date_of_birth" id="id_date_of_birth" data-target="#id_date_of_birth"/>-->
+                              <input type="date" class="datepicker-input" name="date_of_birth" id="id_date_of_birth" data-target="#id_date_of_birth"/>
+                              <div class="input-group-append" data-target="#id_date_of_birth" data-toggle="datepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                               </div>
                             </div>
@@ -50,7 +51,7 @@
 </section>
 <script>
         $(function () {
-    $("#id_date_of_birth").datetimepicker();
+    $("#id_date_of_birth").datepicker();
     });
 </script>
 {% endblock %}
